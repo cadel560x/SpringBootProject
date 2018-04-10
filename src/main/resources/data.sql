@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS shipping;
+
 insert into shipping_company (scid, balance, home_port, name) values (900, 20000000, "Cork Harbour", "P&O");
 insert into shipping_company (scid, balance, home_port, name) values (901, 97000000, "Portsmouth", "Cunard Line");
 insert into shipping_company (scid, balance, home_port, name) values (902, 97000000, "Rotterdam", "Maersk");
