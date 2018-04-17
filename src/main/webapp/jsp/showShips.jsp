@@ -9,10 +9,16 @@
 	</head>
 	<body>
 		<h1>Ships</h1>
-		<ol>
+		<table border="1">
+			<tr>
+				<th>Name</th><th>Passengers</th><th>Cost</th><th>Length(metres)</th><th>Shipping Company</th>
+			</tr>
 			<c:forEach items="${ships}" var="ship">
-				<li>${ship.name}</li>
+				<tr>
+					<td>${ship.name}</td><td>${ship.passengers}</td><td>${ship.cost}</td><td>${ship.metres}</td><td>${ship.shippingCompany.name}</td>
+				</tr>
 			</c:forEach>
-		</ol>
+		</table>
+		<a href="/">Home</a>
 	</body>
 </html>

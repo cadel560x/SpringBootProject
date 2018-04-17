@@ -13,7 +13,7 @@ import com.ships.repositories.ShipRepository;
 public class ShipService {
 //	Fields
 	@Autowired
-	public ShipRepository shipRepository;
+	private ShipRepository shipRepository;
 	
 	
 	

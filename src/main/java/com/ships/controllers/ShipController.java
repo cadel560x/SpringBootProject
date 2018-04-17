@@ -16,7 +16,7 @@ import com.ships.services.ShipService;
 
 @SessionAttributes({"ship","ships"})
 @Controller
-public class shipController {
+public class ShipController {
 //	Fields
 	@Autowired
 	private ShipService shipService;
