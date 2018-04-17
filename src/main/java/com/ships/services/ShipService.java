@@ -24,4 +24,10 @@ public class ShipService {
 		
 	}
 	
+	
+	public Ship save(Ship ship) {
+		return shipRepository.save(ship);
+		
+	}
+	
 } // end class ShipService
