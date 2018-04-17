@@ -5,10 +5,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>List Ships</title>
+		<title>List Shipping Companies</title>
 	</head>
 	<body>
-		<h1>Ships</h1>
+		<h1>Shipping Companies</h1>
 		<table border="1">
 			<tr>
 				<th>Name</th><th>Home Port</th><th>Balance</th><th>Ships</th>
