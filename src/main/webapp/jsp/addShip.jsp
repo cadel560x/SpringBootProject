@@ -14,7 +14,7 @@
 			<label for="name">Ship Name: </label>
 			<form:input path="name" name="name"></form:input><form:errors path="name"></form:errors><br>
 			<label for="passengers">Passengers: </label>
-			<form:input path="passengers" name="passengers"><form:errors path="passengers"></form:errors></form:input><br>
+			<form:input path="passengers" name="passengers"></form:input><form:errors path="passengers"></form:errors><br>
 			<label for="cost">Cost: </label>
 			<form:input path="cost" name="cost"></form:input><form:errors path="cost"></form:errors><br>
 			<label for="metres">Metres: </label>

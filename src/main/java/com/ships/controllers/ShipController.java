@@ -38,21 +38,32 @@ public class ShipController {
 	
 	
 	@RequestMapping(value = "/addShip", method=RequestMethod.GET)
-	public String addShip(@Valid Model model, BindingResult result) {
+	public String addShipGet(Model model) {
 		Ship ship = new Ship();
 		model.addAttribute("ship", ship);
+		
+		return "addShip";
+		
+	} // end addShipGet
+	
+	
+	@RequestMapping(value = "/addShip", method=RequestMethod.POST)
+	public String addShipPost(@Valid @ModelAttribute("ship") Ship ship, BindingResult result) {
+//		Ship ship = new Ship();
+//		model.addAttribute("ship", ship);
 		
 		if (result.hasErrors()) {
 			return "addShip";
 		}
+		else {
+			shipService.save(ship);
+			
+//			Iterable<Ship> ships = shipService.findAll();
+	//		model.addAttribute("ships", ships);
+			
+			return "redirect:showShips";
+		}
 		
-		shipService.save(ship);
-		
-		Iterable<Ship> ships = shipService.findAll();
-		model.addAttribute("ships", ships);
-		
-		return "redirect:showShips";
-		
-	} // end addShip
+	} // end addShipPost
 	
 } // end class shipController
