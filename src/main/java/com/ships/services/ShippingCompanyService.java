@@ -22,6 +22,12 @@ public class ShippingCompanyService {
 	public Iterable<ShippingCompany> findAll() {
 		return shippingCompanyRepository.findAll();
 		
-	}
+	} // end findAll()
+	
+	
+	public ShippingCompany save(ShippingCompany shippingCompany) {
+		return shippingCompanyRepository.save(shippingCompany);
+		
+	} // end save(ShippingCompany shippingCompany)
 	
 } // end class ShippingCompanyService

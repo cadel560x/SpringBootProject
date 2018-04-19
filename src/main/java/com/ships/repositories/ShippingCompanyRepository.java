@@ -10,6 +10,7 @@ import com.ships.model.ShippingCompany;
 
 @Repository
 public interface ShippingCompanyRepository extends CrudRepository<ShippingCompany, Integer> {
-//	'findAll' is defined by default, no need to explicitly define it
+//	'findAll' is defined by default, no need to explicitly declare its signature
+//	'save' is defined by default, no need to explicitly declare its signature
 
 }

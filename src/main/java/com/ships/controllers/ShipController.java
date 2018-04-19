@@ -49,18 +49,11 @@ public class ShipController {
 	
 	@RequestMapping(value = "/addShip", method=RequestMethod.POST)
 	public String addShipPost(@Valid @ModelAttribute("ship") Ship ship, BindingResult result) {
-//		Ship ship = new Ship();
-//		model.addAttribute("ship", ship);
-		
 		if (result.hasErrors()) {
 			return "addShip";
 		}
 		else {
 			shipService.save(ship);
-			
-//			Iterable<Ship> ships = shipService.findAll();
-	//		model.addAttribute("ships", ships);
-			
 			return "redirect:showShips";
 		}
 		

@@ -22,12 +22,12 @@ public class ShipService {
 	public Iterable<Ship> findAll() {
 		return shipRepository.findAll();
 		
-	}
+	} // end findAll()
 	
 	
 	public Ship save(Ship ship) {
 		return shipRepository.save(ship);
 		
-	}
+	} // end save(Ship ship)
 	
 } // end class ShipService

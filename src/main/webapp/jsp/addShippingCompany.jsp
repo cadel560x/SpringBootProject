@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Add Ships</title>
+		<title>Add Shipping Company</title>
 		<style type="text/css">
 			label{
 			    display:inline-block;
@@ -16,16 +16,14 @@
 		</style>
 	</head>
 	<body>
-		<h1>Add Ship</h1>
-		<form:form modelAttribute="ship">
-			<label for="name">Ship Name: </label>
+		<h1>Add Shipping Company</h1>
+		<form:form modelAttribute="shippingCompany">
+			<label for="name">Company Name: </label>
 			<form:input path="name" name="name"></form:input><form:errors path="name"></form:errors><br>
-			<label for="passengers">Passengers: </label>
-			<form:input path="passengers" name="passengers"></form:input><form:errors path="passengers"></form:errors><br>
-			<label for="cost">Cost: </label>
-			<form:input path="cost" name="cost"></form:input><form:errors path="cost"></form:errors><br>
-			<label for="metres">Metres: </label>
-			<form:input path="metres" name="metres"></form:input><form:errors path="metres"></form:errors><br>
+			<label for="home-port">Home Port: </label>
+			<form:input path="homePort" name="home-port"></form:input><form:errors path="homePort"></form:errors><br>
+			<label for="balance">Balance: </label>
+			<form:input path="balance" name="balance"></form:input><form:errors path="balance"></form:errors><br>
 			
 			<input type="submit" value="Add">
 		</form:form>
