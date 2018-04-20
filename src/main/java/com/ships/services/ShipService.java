@@ -30,4 +30,10 @@ public class ShipService {
 		
 	} // end save(Ship ship)
 	
+	
+	public Iterable<Ship> findByShippingCompanyIsNull() {
+		return shipRepository.findByShippingCompanyIsNull();
+		
+	} // end findByShippingCompanyIsNull()
+	
 } // end class ShipService

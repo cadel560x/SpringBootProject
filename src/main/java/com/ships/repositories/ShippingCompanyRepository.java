@@ -13,4 +13,4 @@ public interface ShippingCompanyRepository extends CrudRepository<ShippingCompan
 //	'findAll' is defined by default, no need to explicitly declare its signature
 //	'save' is defined by default, no need to explicitly declare its signature
 
-}
+} // end interface ShippingCompanyRepository

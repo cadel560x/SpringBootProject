@@ -13,4 +13,4 @@ public interface OrderRepository extends CrudRepository<OrderInfo, Integer> {
 //	'findAll' is defined by default, no need to explicitly declare its signature
 //	'save' is defined by default, no need to explicitly declare its signature
 	
-}
+} // end interface OrderRepository

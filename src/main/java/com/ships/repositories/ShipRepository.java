@@ -13,4 +13,7 @@ public interface ShipRepository extends CrudRepository<Ship, Integer> {
 //	'findAll' is defined by default, no need to explicitly declare its signature
 //	'save' is defined by default, no need to explicitly declare its signature
 	
-}
+	// Method to find available ships
+	Iterable<Ship> findByShippingCompanyIsNull();
+	
+} // end interface ShipRepository

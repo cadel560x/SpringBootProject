@@ -52,7 +52,8 @@ public class OrderController {
 		OrderInfo orderInfo = new OrderInfo();
 		model.addAttribute("orderInfo", orderInfo);
 		
-		Iterable<Ship> ships = (ArrayList<Ship>) shipService.findAll();
+		// Get available ships
+		Iterable<Ship> ships = (ArrayList<Ship>) shipService.findByShippingCompanyIsNull();
 		Map<Ship,String> shipList = new HashMap<Ship,String>();
 		
 		String label = "";
@@ -63,6 +64,7 @@ public class OrderController {
 		
 		model.addAttribute("shipList", shipList);
 		
+		// Get shipping companies
 		Iterable<ShippingCompany> shippingCompanies = (ArrayList<ShippingCompany>) shippingCompanyService.findAll();
 		Map<ShippingCompany, String> shippingCompanyList = new HashMap<ShippingCompany, String>();
 
