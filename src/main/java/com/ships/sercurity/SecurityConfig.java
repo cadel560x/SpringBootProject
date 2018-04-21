@@ -1,4 +1,4 @@
-package com.ships.config;
+package com.ships.sercurity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	     .and()
 	     .formLogin()
 	     .and()
-	     .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/logout");
+	     .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/logout.html");
 
 	} // end SecurityConfig(HttpSecurity httpSecurity)
 	
