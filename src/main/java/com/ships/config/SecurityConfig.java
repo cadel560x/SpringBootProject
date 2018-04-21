@@ -5,6 +5,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 
 
@@ -18,7 +19,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	     .antMatchers("/addShip", "/addShippingCompany", "/createOrder")
 	     .hasRole("USER")
 	     .and()
-	     .formLogin();
+	     .formLogin()
+	     .and()
+	     .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/logout");
 
 	} // end SecurityConfig(HttpSecurity httpSecurity)
 	
@@ -28,6 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 							throws Exception {
 	    auth.inMemoryAuthentication()
 	      .withUser("user").password("user").roles("USER");
+	    
 	} // end configureGlobal(AuthenticationManagerBuilder auth)
 
 	
